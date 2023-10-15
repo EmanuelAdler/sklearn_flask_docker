@@ -6,11 +6,11 @@ from flask import request
 import pandas as pd
 
 from ms import app
-from ms.functions import get_model_response
+from ms.functions import get_model_response, get_predict_all
 
 
-model_name = "Breast Cancer Wisconsin (Diagnostic)"
-model_file = 'model_binary.dat.gz'
+model_name = "Random Forest model for water potability prediction"
+model_file = 'random_forest.joblib'
 version = "v1.0.0"
 
 
@@ -28,6 +28,14 @@ def info():
 @app.route('/health', methods=['GET'])
 def health():
     """Return service health"""
+    return 'ok'
+
+
+@app.route('/predict-all', methods=['GET'])
+def predict_all():
+    """Return predict all"""
+    get_predict_all()
+    
     return 'ok'
 
 
