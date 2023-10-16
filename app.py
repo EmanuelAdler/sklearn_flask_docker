@@ -9,8 +9,8 @@ from ms import app
 from ms.functions import get_model_response, get_predict_all
 
 
-model_name = "Random Forest model for water potability prediction"
-model_file = 'random_forest.joblib'
+model_name = "Tensorflow model for water potability prediction"
+model_file = 'tf_model.keras'
 version = "v1.0.0"
 
 

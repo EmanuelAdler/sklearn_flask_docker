@@ -1,5 +1,5 @@
 # POST method predict
-curl -d '[{"ph": -0.20403942329204147, "hardness": 0.6445352089314601, "solids": 0.07622023587604693, "chloramines": 0.04580666274047275, "conductivity": -0.5668044335694764, "turbidity": -0.41059759034953547}]'      -H "Content-Type: application/json"      -X POST http://0.0.0.0:8000/predict
+curl -d '[{"ph": -0.41986447521597836, "hardness": -0.9007961481616725, "solids": -1.1291045922334026, "chloramines": 0.3354086809034339, "conductivity": -0.9101237436587378, "turbidity": -1.347615260066446}]'      -H "Content-Type: application/json"      -X POST http://0.0.0.0:8000/predict
 
 # GET method info
 curl -X GET http://localhost:8000/info

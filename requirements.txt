@@ -22,3 +22,5 @@ six==1.16.0
 sklearn==0.0
 threadpoolctl==3.0.0
 Werkzeug==2.0.2
+tensorflow==2.13.0
+keras==2.13.1

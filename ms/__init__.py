@@ -1,10 +1,9 @@
 from flask import Flask
-import joblib
-from sklearn.ensemble import RandomForestClassifier
-
+from keras.layers import Dense, Dropout, BatchNormalization
+from keras.models import Sequential, load_model
 
 # Initialize App
 app = Flask(__name__)
 
 # Load models
-model = joblib.load('model/random_forest.joblib')
+model = load_model('model/tf_model.keras')

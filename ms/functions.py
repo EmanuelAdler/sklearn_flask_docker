@@ -4,8 +4,9 @@ from ms import model
 
 
 def predict(X, model):
-    prediction = model.predict(X)[0]
-    print(model.predict(X))
+    prediction = model.predict(X)
+    prediction = (prediction > 0.5).astype(int)
+    print(prediction)
     return prediction
 
 
@@ -28,10 +29,10 @@ def get_predict_all():
     test_df = pd.read_pickle("model/test_df.pkl")
     test_expect = pd.read_pickle("model/test_expect.pkl")
     y_pred = model.predict(test_df)
+    y_pred = (y_pred > 0.5).astype(int)
     print(test_expect)
     print(y_pred)
     print(accuracy_score(test_expect, y_pred))
     print(precision_score(test_expect, y_pred))
     print(recall_score(test_expect, y_pred))
     print(f1_score(test_expect, y_pred))
-    
