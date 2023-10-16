@@ -9,8 +9,8 @@ from ms import app
 from ms.functions import get_model_response, get_predict_all
 
 
-model_name = "Random Forest model for water potability prediction"
-model_file = 'random_forest.joblib'
+model_name = "MLP model for water potability prediction"
+model_file = 'mlp.joblib'
 version = "v1.0.0"
 
 
@@ -35,7 +35,7 @@ def health():
 def predict_all():
     """Return predict all"""
     get_predict_all()
-    
+
     return 'ok'
 
 

@@ -7,4 +7,4 @@ from sklearn.ensemble import RandomForestClassifier
 app = Flask(__name__)
 
 # Load models
-model = joblib.load('model/random_forest.joblib')
+model = joblib.load('model/mlp.joblib')

@@ -34,4 +34,3 @@ def get_predict_all():
     print(precision_score(test_expect, y_pred))
     print(recall_score(test_expect, y_pred))
     print(f1_score(test_expect, y_pred))
-    
